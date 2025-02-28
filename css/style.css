@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color01: #a203c2b7;
+    --color02: #fff;
+    --color03: #eef112;
+
+    --font-padrao: arial, verdana, helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--color01);
+    width: 100%;
+    padding: 15px 0;
+}
+
+.container { 
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.logo h1 a {
+    color: var(--color03);
+    font-family: var(--font-padrao);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo h1 a:hover {
+    color: var(--color02);
+}
+
+.botao {
+    position: absolute;
+    right: 10px;
+}
+
+.botao .icone a {
+    text-decoration: none;
+    color: var(--color01);
+    font-size: 20px;
+    margin-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color03);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.botao .icone a:hover {
+    background-color: var(--color02)
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;  /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;  /* Fica acima de outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;  /* Largura do modal */
+    height: 50%;
+}
+
+/* Fechar o modal */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/*imagem central "Livro aberto"*/
+
+main{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.livro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+}

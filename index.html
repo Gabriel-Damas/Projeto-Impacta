@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon/L -favicon.png" type="image/x-icon">
+    <title>LibraHub</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#">LIBRAHUB</a></h1>
+            </div>
+            <div class="botao">
+                <nav class="icone">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" id="openModal"><i class="fa-solid fa-plus"></i></a>
+                </nav>
+            </div>    
+        </div>        
+    </header>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <main class="cadastro">
+                <form action="#">
+                    <h1>Cadastro</h1>
+                    <div class="input-box">
+                        <label for="text">Título</label>
+                        <input type="text" id="text" name="text">
+                    </div> 
+        
+                    <div class="input-box">
+                        <label for="text">Autor(a)</label>
+                        <input type="text" id="text" name="text">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="text">Lançamento</label>
+                        <input  type="text" id="text" name="text">
+                    </div>   
+                            
+                    <button type="submit" class="button">Cadastrar</button>
+                </form>
+             </main>           
+        </div>
+    </div>
+
+    <main>
+        <div class="livro">
+            <img src="img/livro.png" alt="Livro3d">
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
