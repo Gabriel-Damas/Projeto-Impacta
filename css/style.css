@@ -68,37 +68,51 @@ header {
     background-color: var(--color02)
 }
 
-/* Estilos do modal */
+/* Estilos do modal aprimorado */
 .modal {
-    display: none;  /* Inicialmente oculto */
+    display: none; /* Inicialmente oculto */
     position: fixed;
-    z-index: 1;  /* Fica acima de outros conteúdos */
+    z-index: 1000; /* Mantém acima dos outros conteúdos */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Conteúdo do modal */
 .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 50%;  /* Largura do modal */
-    height: 50%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 40%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza exatamente no meio da tela */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Fechar o modal */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -55%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Botão de fechar */
 .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
     position: absolute;
     top: 10px;
-    right: 25px;
+    right: 15px;
+    font-size: 24px;
+    color: #888;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
 .close:hover,
@@ -108,6 +122,58 @@ header {
     cursor: pointer;
 }
 
+
+/* Estilização do formulário dentro do modal */
+.cadastro h1 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--color01);
+    margin-bottom: 20px;
+    
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.input-box input:focus {
+    border-color: var(--color01);
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background: var(--color01);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #8200a3;
+}
 
 
 /*imagem central "Livro aberto"*/
